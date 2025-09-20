@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"; // Import the Link component
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Home, ChefHat, Building, Palette } from "lucide-react";
@@ -121,9 +122,11 @@ export default function Services() {
                           </li>
                         ))}
                       </ul>
-                      <Button size="lg" className="hover-lift">
-                        Get Quote for {service.title}
-                      </Button>
+                      <Link to="/contact">
+                        <Button size="lg" className="hover-lift">
+                          Get Quote for {service.title}
+                        </Button>
+                      </Link>
                     </CardContent>
                   </Card>
                 </div>
@@ -140,7 +143,7 @@ export default function Services() {
             Ready to Transform Your Space?
           </h2>
           <p className="font-body text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-            Let's discuss your project and create something beautiful together. 
+            Let's discuss your project and create something beautiful together.
             Contact us today for a consultation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -150,14 +153,14 @@ export default function Services() {
               </Button>
             </a>
             <a href="https://wa.me/919784037296" target="_blank" rel="noopener noreferrer">
-  <Button
-    size="lg"
-    variant="outline"
-    className="hover-lift border-primary-foreground text-primary hover:!bg-primary-foreground hover:!text-primary"
-  >
-    WhatsApp Us
-  </Button>
-</a>
+              <Button
+                size="lg"
+                variant="outline"
+                className="hover-lift border-primary-foreground text-primary hover:!bg-primary-foreground hover:!text-primary"
+              >
+                WhatsApp Us
+              </Button>
+            </a>
           </div>
         </div>
       </section>
